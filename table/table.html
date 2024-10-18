@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tablestyles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="weather-logo">
+                <img src="logo.jpg" height="50px" width="50px" alt="">
+                Horizon
+            </div>
+            <button class="dashboard"><svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px"
+                    viewBox="0 0 24 24">
+                    <title>view-dashboard</title>
+                    <path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" />
+                </svg>Dashboard</button>
+            <button class="table" disabled><svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px"
+                    viewBox="0 0 24 24">
+                    <title>table</title>
+                    <path
+                        d="M5,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20H5A2,2 0 0,1 3,18V6A2,2 0 0,1 5,4M5,8V12H11V8H5M13,8V12H19V8H13M5,14V18H11V14H5M13,14V18H19V14H13Z" />
+                </svg>Table</button>
+        </div>
+        <div class="content">
+            <div class="navbar">
+                <div class="searchcontainer">
+                    <input type="text" class="searchbar" placeholder="Search">
+                    <button class="search-button">Get Weather</button>
+                </div>
+
+                <div class="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 0 24 24">
+                        <title>account-circle</title>
+                        <path
+                            d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
+                    </svg>
+                    <span>Profile</span>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="card1">
+                    <h3>5-Day Forecast<span></span></h3>
+                    <div class="controls">
+                        <select id="sort-dropdown" class="sort-dropdown">
+                            <option default>Sort by</option>
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                        <button id="filter-rain" class="filter-button">Filter Rainy Days</button>
+                    </div>
+                    <div class="forecast-container">
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="chat-header">
+                        <div class="chat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="" width="24px" height="24px" viewBox="0 0 24 24">
+                                <title>grain</title>
+                                <path
+                                    d="M10,12A2,2 0 0,0 8,14A2,2 0 0,0 10,16A2,2 0 0,0 12,14A2,2 0 0,0 10,12M6,8A2,2 0 0,0 4,10A2,2 0 0,0 6,12A2,2 0 0,0 8,10A2,2 0 0,0 6,8M6,16A2,2 0 0,0 4,18A2,2 0 0,0 6,20A2,2 0 0,0 8,18A2,2 0 0,0 6,16M18,8A2,2 0 0,0 20,6A2,2 0 0,0 18,4A2,2 0 0,0 16,6A2,2 0 0,0 18,8M14,16A2,2 0 0,0 12,18A2,2 0 0,0 14,20A2,2 0 0,0 16,18A2,2 0 0,0 14,16M18,12A2,2 0 0,0 16,14A2,2 0 0,0 18,16A2,2 0 0,0 20,14A2,2 0 0,0 18,12M14,8A2,2 0 0,0 12,10A2,2 0 0,0 14,12A2,2 0 0,0 16,10A2,2 0 0,0 14,8M10,4A2,2 0 0,0 8,6A2,2 0 0,0 10,8A2,2 0 0,0 12,6A2,2 0 0,0 10,4Z" />
+                            </svg>
+                        </div>
+                        <h3>Horizon AI</h3>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message ai">
+                            
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" placeholder="Ask Horizon" class="chat-input">
+                        <button class="chat-send">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>send</title><path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="table.js"></script>
+</body>
+
+</html>

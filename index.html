@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="weather-logo">
+                <img src="logo.jpg" height="50px" width="50px" alt="">
+                Horizon
+            </div>
+            <button class="dashboard"><svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px"
+                    viewBox="0 0 24 24">
+                    <title>view-dashboard</title>
+                    <path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" />
+                </svg>Dashboard</button>
+            <button class="table"><svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px"
+                    viewBox="0 0 24 24">
+                    <title>table</title>
+                    <path
+                        d="M5,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20H5A2,2 0 0,1 3,18V6A2,2 0 0,1 5,4M5,8V12H11V8H5M13,8V12H19V8H13M5,14V18H11V14H5M13,14V18H19V14H13Z" />
+                </svg>Table</button>
+        </div>
+        <div class="content">
+            <div class="navbar">
+                <div class="searchcontainer">
+                    <input type="text" class="searchbar" placeholder="Search">
+                    <button class="search-button">Get Weather</button>
+                </div>
+
+                <div class="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px" viewBox="0 0 24 24">
+                        <title>account-circle</title>
+                        <path
+                            d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
+                    </svg>
+                    <span>Profile</span>
+                </div>
+            </div>
+            <div class="widget">
+                <div class="col1">
+                    <div class="name">
+                    </div>
+                    <div class="icon">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="temp">
+                    </div>
+                    <div class="description"></div>
+                    <div class="detail">
+                        <div class="wind">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 24 24">
+                                <title>windsock</title>
+                                <path
+                                    d="M7 5V13L22 11V7L7 5M10 6.91L13 7.31V10.69L10 11.09V6.91M16 7.71L19 8.11V9.89L16 10.29V7.71M5 10V11H6V12H5V21H3V4C3 3.45 3.45 3 4 3S5 3.45 5 4V6H6V7H5V10Z" />
+                            </svg>
+                            <div>
+                                <p class="windspeed">
+
+                                </p>
+                                <p>Wind</p>
+                            </div>
+                        </div>
+
+                        <div class="humidity">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 24 24">
+                                <title>water-outline</title>
+                                <path
+                                    d="M12,3.77L11.25,4.61C11.25,4.61 9.97,6.06 8.68,7.94C7.39,9.82 6,12.07 6,14.23A6,6 0 0,0 12,20.23A6,6 0 0,0 18,14.23C18,12.07 16.61,9.82 15.32,7.94C14.03,6.06 12.75,4.61 12.75,4.61L12,3.77M12,6.9C12.44,7.42 12.84,7.85 13.68,9.07C14.89,10.83 16,13.07 16,14.23C16,16.45 14.22,18.23 12,18.23C9.78,18.23 8,16.45 8,14.23C8,13.07 9.11,10.83 10.32,9.07C11.16,7.85 11.56,7.42 12,6.9Z" />
+                            </svg>
+                            <div>
+                                <p class="humidityval"></p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col2">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-container">
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h2 class="chart-heading">5-Day Temperature Forecast</h2>
+                    <canvas id="bar-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h2 class="chart-heading">Weather Conditions</h2>
+                    <canvas id="doughnut-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h2 class="chart-heading">Temperature Trend</h2>
+                    <canvas id="line-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
